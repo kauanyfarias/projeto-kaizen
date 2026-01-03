@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizen</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/calculadora.css">
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="#"><img src="imagens/logo.png" alt="Logo marca Kaizen" ></a>
+            <ul>
+                <a href="teste.html">
+                    <li><span class="material-icons-outlined">
+                        home
+                        </span>Início</li>
+                </a>
+                <a href="teste.html">
+                    <li><span class="material-icons-outlined">
+                        trending_up
+                        </span>Fluxo de Caixa</li>
+                </a>
+                <a href="teste.html">
+                    <li><span class="material-icons-outlined">
+                        donut_small
+                        </span>Gráficos</li>
+                </a>
+                <a href="teste.html">
+                    <li><span class="material-icons-outlined">
+                        savings
+                        </span>Investimentos</li>
+                </a>
+                <a href="teste.html">
+                    <li><span class="material-icons-outlined">
+                        calculate
+                        </span>Calculadora</li>
+                </a>
+                <a href="teste.html">
+                    <li><span class="material-icons-outlined">
+                        groups
+                        </span>Gestão de equipe</li>
+                </a>
+            </ul>
+            <ul>
+                <a href="teste.html">
+                    <li><span class="material-icons-outlined">
+                        settings
+                        </span>Configurações</li>
+                </a>
+                <a href="teste.html">
+                    <li><span class="material-icons-outlined">
+                        logout
+                    </span>Sair</li>
+                </a>
+            </ul>
+        </nav>
+        <section>
+            <header>
+                <h1>Calculadora Financeira</h1>
+                <p id="subtitulo">Simule seus investimentos e planeje seu futuro</p>
+            </header>
+
+            <div id="filtro">
+                <p><span class="material-icons-outlined">
+                    trending_up
+                    </span>Juros Compostos</p>
+            </div>
+
+            <div id="simulacao">
+                <h2><span class="material-icons-outlined">
+                    calculate
+                    </span>Parâmetros de Simulação</h2>
+                <form action="cadastro.php" method="post">
+                    <p>Valor inicial (R$)</p>
+                    <input type="number" name="vp" id="ivp" required placeholder="Digite um valor">
+                    <p>Aporte Mensal (R$)</p>
+                    <input type="number" name="aporte" id="iaporte" required placeholder="Digite um valor">
+                    <p>Taxa de Juros Anual (%)</p>
+                    <input type="number" name="taxa" id="Taxa" required placeholder="Digite uma taxa"> 
+                    <p>Prazo(meses)</p>
+                    <input type="number" name="prazo" id="iprazo" required placeholder="Digite os meses">
+                    <input type="submit" value="Calcular">
+                </form>
+            </div>
+
+            <div>
+                <h2>Resultados da Simulação</h2>
+                <div>
+                    <p>Valor Investido</p>
+                    <p>Resultados</p>
+                </div>
+                <div>
+                    <p>Juros Ganhos</p>
+                    <p>Resultados</p>
+                </div>
+                <div>
+                    <p>Valor Final</p>
+                    <p>Resultados</p>
+                </div>
+                <h3>Métrica de Perfomace</h3>
+                <p>Retorno Total:</p>
+                <p>Tempo de duplicação:</p>
+                <p>Juros sobre investimento:</p>
+            </div>
+            <div>
+                <h2>Dicas de Investimentos</h2>
+                <div class="dica">
+                    <p>Icone</p>
+                    <p>Comece Cedo</p>
+                    <p>O tempo é seu maior aliado. Quanto antes você começar a investir, mais os juros compostos trabalharão ao seu favor.</p>
+                </div>
+                <div class="dica">
+                    <p>Icone</p>
+                    <p>Seja Consistente</p>
+                    <p>Aportes regulares, mesmo que pequenos, podem gerar grandes resultados ao longo do tempo.</p>
+                </div>
+                <div class="dica">
+                    <p>Icone</p>
+                    <p>Defina Metas</p>
+                    <p>Ter objetivos claros ajuda a manter o foco e a disciplina necessária para investir regularmente.</p>
+                </div>
+            </div>
+        </section>
+    </main> 
+</body>
+</html>
