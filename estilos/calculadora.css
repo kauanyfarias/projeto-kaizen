@@ -45,7 +45,7 @@ div{
     margin-bottom: 20px;
 }
 
-/* CONTEINER DE TÍTULO */
+/* CONTEINER DE CABEÇALHO */
 #filtro{
     display: flex;
     flex-flow: row nowrap;
@@ -61,11 +61,23 @@ section>#filtro>p{
     align-items: center;
 }
 
+/* FLEX BOX DO PARÂMETRO E RESULTADO */
+.conteiner{
+    background-color: inherit;
+    box-shadow: none;
+    padding: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
 /* CONTAINER DE PARÂMETRO */
 
 div#simulacao>form{
     display: flex;
     flex-flow: column nowrap;
+
 }
 
 h2{
@@ -90,12 +102,29 @@ form>p{
     color: #a9a9a9;
 }
 
-input[type=submit]{
+button{
     background-image: linear-gradient(to right, #902eca 10%, #6E17A6 100%);
+    flex: auto;
     color: #F1F1F1;
     font-weight: 600;
     padding: 12px 20px;
     border-radius: 12px;
     border: 0;
-    flex: auto;
+}
+
+/* RESULTADOS */
+#investido{
+    background-image: linear-gradient(to right, #902eca 10%, #6E17A6 100%);
+}
+#juros{
+    background-image: linear-gradient(to right, #22C55E, #158a40);
+}
+#final{
+    background-image: linear-gradient(to right, #3367D1, #2412AB);
+}
+
+.real{
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-top: 8px;
 }

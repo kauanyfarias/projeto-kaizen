@@ -69,42 +69,45 @@
                     </span>Juros Compostos</p>
             </div>
 
-            <div id="simulacao">
-                <h2><span class="material-icons-outlined">
-                    calculate
-                    </span>Parâmetros de Simulação</h2>
-                <form action="cadastro.php" method="post">
-                    <p>Valor inicial (R$)</p>
-                    <input type="number" name="vp" id="ivp" required placeholder="Digite um valor">
-                    <p>Aporte Mensal (R$)</p>
-                    <input type="number" name="aporte" id="iaporte" required placeholder="Digite um valor">
-                    <p>Taxa de Juros Anual (%)</p>
-                    <input type="number" name="taxa" id="Taxa" required placeholder="Digite uma taxa"> 
-                    <p>Prazo(meses)</p>
-                    <input type="number" name="prazo" id="iprazo" required placeholder="Digite os meses">
-                    <input type="submit" value="Calcular">
-                </form>
+            <div class="conteiner">
+                <div id="simulacao">
+                    <h2><span class="material-icons-outlined">
+                        calculate
+                        </span>Parâmetros de Simulação</h2>
+                    <form action="cadastro.php" method="post">
+                        <p>Valor inicial (R$)</p>
+                        <input type="number" name="vp" id="ivp" required placeholder="Digite um valor">
+                        <p>Aporte Mensal (R$)</p>
+                        <input type="number" name="aporte" id="iaporte" required placeholder="Digite um valor">
+                        <p>Taxa de Juros Anual (%)</p>
+                        <input type="number" name="taxa" id="itaxa" required placeholder="Digite uma taxa">
+                        <p>Prazo(meses)</p>
+                        <input type="number" name="prazo" id="iprazo" required placeholder="Digite os meses">
+        
+                        <button id="icalcular">Calcular</button>
+                    </form>
+                </div>
+                <div>
+                    <h2>Resultados da Simulação</h2>
+                    <div id="investido">
+                        <p>Valor Investido</p>
+                        <p class="real">R$7.000,00</p>
+                    </div>
+                    <div id="juros">
+                        <p>Juros Ganhos</p>
+                        <p class="real">R$468,08</p>
+                    </div>
+                    <div id="final">
+                        <p>Valor Final</p>
+                        <p class="real">R$7.468,08</p>
+                    </div>
+                    <h3>Métricas de Perfomace</h3>
+                    <p>Retorno Total: JS</p>
+                    <p>Tempo de duplicação: JS</p>
+                    <p>Juros sobre investimento:JS</p>
+                </div>
             </div>
 
-            <div>
-                <h2>Resultados da Simulação</h2>
-                <div>
-                    <p>Valor Investido</p>
-                    <p>Resultados</p>
-                </div>
-                <div>
-                    <p>Juros Ganhos</p>
-                    <p>Resultados</p>
-                </div>
-                <div>
-                    <p>Valor Final</p>
-                    <p>Resultados</p>
-                </div>
-                <h3>Métrica de Perfomace</h3>
-                <p>Retorno Total:</p>
-                <p>Tempo de duplicação:</p>
-                <p>Juros sobre investimento:</p>
-            </div>
             <div>
                 <h2>Dicas de Investimentos</h2>
                 <div class="dica">
@@ -125,5 +128,39 @@
             </div>
         </section>
     </main> 
+    <script>
+        /* LISTENERES */
+        calcular.addEventListener('click', resultado)
+
+        function resultado(){
+            /*ENCONTRANDO OS ELEMENTOS */
+            var inicial = document.querySelector('input#ivp')
+            var aporte = document.querySelector('input#iaporte')
+            var juros = document.querySelector('input#itaxa')
+            var prazo = document.querySelector('input#iprazo')
+            var calcular = document.querySelector('button#icalcular')
+
+            /* RESPOSTAS */
+            var investido = document.querySelector('div#investido') 
+            var jurosgan = document.querySelector('div#juros')
+            var final = document.querySelector('div#final')
+
+            /* Convertendo para número */
+            var inicialv = Number(inicial.value)
+            var aporten = Number(aporte.value)
+            var jurosn = Number(aporte.value)
+            var prazon = Number(prazo.value)
+            var calcularn = Number(calcular.value)
+
+            var resultado = inicialv*(1+jurosn)**prazon+aporten*[((1+prazon)**prazon-1)/jurosn]
+
+            final.innerHTML = `R$${resultado}`
+        }
+
+        
+
+        
+        
+    </script>
 </body>
 </html>
