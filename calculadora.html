@@ -1,51 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaizen</title>
     <!-- Importação estável via jsDelivr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css">
-
+    <!-- Estilos | ARRUMAR NOMES!-->
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/calculadora.css">
     <link rel="stylesheet" href="estilos/mobile.css">
 </head>
+
 <body>
     <main>
         <nav>
-            <a href="#"><img src="imagens/logo.png" alt="Logo marca Kaizen" ></a>
+            <a href="#"><img src="imagens/logo.png" alt="Logo marca Kaizen"></a>
             <ul>
                 <a href="teste.html">
-                    <li><span class=
-                        "fi fi-rr-house-chimney"
-                        ></span>Início</li>     
+                    <li><span class="fi fi-rr-house-chimney"></span>Início</li>
                 </a>
                 <a href="teste.html">
                     <li><span class="fi fi-rs-arrow-trend-up"></span>Fluxo de Caixa</li>
                 </a>
                 <a href="teste.html">
-                    <li><span
-                        class=
-                        "fi fi-rs-chart-pie-alt"
-                        ></span>Gráficos</li>
+                    <li><span class="fi fi-rs-chart-pie-alt"></span>Gráficos</li>
                 </a>
                 <a href="teste.html">
-                    <li><span class=
-                        "fi fi-rs-pig">
-                        </span>Investimentos</li>
+                    <li><span class="fi fi-rs-pig"></span>Investimentos</li>
                 </a>
                 <a href="teste.html">
-                    <li><span class=
-                        "fi fi-rr-calculator"
-                        >
-                        </span>Calculadora</li>
+                    <li><span class="fi fi-rr-calculator"></span>Calculadora</li>
                 </a>
                 <a href="teste.html">
-                    <li><span
-                        class=
-                        "fi fi-rs-users-alt"
-                        ></span>Gestão de equipe</li>
+                    <li><span class="fi fi-rs-users-alt"></span>Gestão de equipe</li>
                 </a>
             </ul>
             <ul>
@@ -53,121 +42,110 @@
                     <li><span class="fi fi-rr-settings"></span>Configurações</li>
                 </a>
                 <a href="teste.html">
-                    <li><span class=
-                        "fi fi-rs-exit"
-                        >
-
-                    </span>Sair</li>
+                    <li><span class="fi fi-rs-exit"></span>Sair</li>
                 </a>
             </ul>
         </nav>
-        <section>
+        <section id="principal">
             <header>
                 <h1>Calculadora Financeira</h1>
                 <p id="subtitulo">Simule seus investimentos e planeje seu futuro</p>
             </header>
 
-            <div id="filtro">
-                <p><span class="material-icons-outlined">
-                    trending_up
-                    </span>Juros Compostos</p>
-            </div>
+            <article id="conteiner">
+                    <section id="simulacao">
+                        <h2><span class="fi fi-rr-calculator"></span>Parâmetros de Simulação</h2>
+                        <form action="" method="post">
+                            <label for="ivi">Valor inicial (R$)</label>
+                            <input type="number" name="vi" id="ivi" required placeholder="Digite um valor">
+                            <label for="iaporte">Aporte Mensal (R$)</label>
+                            <input type="number" name="aporte" id="iaporte" required placeholder="Digite um valor">
+                            <label for="itaxa">Taxa de Juros(%)</label>
+                            <input type="number" name="taxa" id="itaxa" required placeholder="Digite uma taxa">
+                            <label for="iprazo">Prazo(meses)</label>
+                            <input type="number" name="prazo" id="iprazo" required placeholder="Digite os meses">
+                            <button type="button" id="icalcular">Calcular</button>
+                        </form>
+                    </section>
+                
+                    <section id="resultados">
+                        <h2>Resultados da Simulação</h2>
+                        <div id="investido">
+                            <p>Valor Investido</p>
+                            <p class="real" id="ivinvest">R$7.000,00</p>
+                        </div>
+                        <div id="juros">
+                            <p>Juros Ganhos</p>
+                            <p class="real" id="ijg">R$468,08</p>
+                        </div>
+                        <div id="final">
+                            <p>Valor Final</p>
+                            <p class="real" id="ivfinal">R$7.468,08</p>
+                        </div>
+                        <h3>Métricas de Perfomace</h3>
+                        <p>Retorno Total: JS</p>
+                        <p>Tempo de duplicação: JS</p>
+                        <p>Juros sobre investimento:JS</p>
+                    </section>
+            </article>
 
-            <div class="conteiner">
-                <div id="simulacao">
-                    <h2><span class="material-icons-outlined">
-                        calculate
-                        </span>Parâmetros de Simulação</h2>
-                    <form action="cadastro.php" method="post">
-                        <p>Valor inicial (R$)</p>
-                        <input type="number" name="vp" id="ivp" required placeholder="Digite um valor">
-                        <p>Aporte Mensal (R$)</p>
-                        <input type="number" name="aporte" id="iaporte" required placeholder="Digite um valor">
-                        <p>Taxa de Juros Anual (%)</p>
-                        <input type="number" name="taxa" id="itaxa" required placeholder="Digite uma taxa">
-                        <p>Prazo(meses)</p>
-                        <input type="number" name="prazo" id="iprazo" required placeholder="Digite os meses">
-        
-                        <button id="icalcular">Calcular</button>
-                    </form>
-                </div>
-
-                <div id="resultados">
-                    <h2>Resultados da Simulação</h2>
-                    <div id="investido">
-                        <p>Valor Investido</p>
-                        <p class="real">R$7.000,00</p>
-                    </div>
-                    <div id="juros">
-                        <p>Juros Ganhos</p>
-                        <p class="real">R$468,08</p>
-                    </div>
-                    <div id="final">
-                        <p>Valor Final</p>
-                        <p class="real">R$7.468,08</p>
-                    </div>
-                    <h3>Métricas de Perfomace</h3>
-                    <p>Retorno Total: JS</p>
-                    <p>Tempo de duplicação: JS</p>
-                    <p>Juros sobre investimento:JS</p>
-                </div>
-            </div>
-
-            <div>
+            <aside>
                 <h2>Dicas de Investimentos</h2>
-                <div id="dicas">
+                <section id="dicas">
                     <div class="dica">
-                        <p><span class="fi fi-rs-arrow-trend-up" id="seta"></span></p>
-                        <p>Comece Cedo</p>
-                        <p>O tempo é seu maior aliado. Quanto antes você começar a investir, mais os juros compostos trabalharão ao seu favor.</p>
+                        <span class="fi fi-rs-arrow-trend-up" id="seta"></span>
+                        <h4>Comece Cedo</h4>
+                        <p>O tempo é seu maior aliado. Quanto antes você começar a investir, mais os juros compostos
+                            trabalharão ao seu favor.</p>
                     </div>
                     <div class="dica">
-                        <p><span class="fi fi-br-calendar" id="calendario"></span></p>
-                        <p>Seja Consistente</p>
+                        <span class="fi fi-br-calendar" id="calendario"></span>
+                        <h4>Seja Consistente</h4>
                         <p>Aportes regulares, mesmo que pequenos, podem gerar grandes resultados ao longo do tempo.</p>
                     </div>
                     <div class="dica">
-                        <p><span class="fi fi-rr-bullseye" id="alvo"></span></p>
-                        <p>Defina Metas</p>
+                        <span class="fi fi-rr-bullseye" id="alvo"></span>
+                        <h4>Defina Metas</h4>
                         <p>Ter objetivos claros ajuda a manter o foco e a disciplina necessária para investir regularmente.</p>
                     </div>
-                </div>
-            </div>
+                </section>
+            </aside>
         </section>
-    </main> 
+    </main>
     <script>
         /* LISTENERES */
+        var calcular = document.querySelector('button#icalcular')
         calcular.addEventListener('click', resultado)
-
-        function resultado(){
+        
+        function resultado() {
             /*ENCONTRANDO OS ELEMENTOS */
-            var inicial = document.querySelector('input#ivp')
+            var vinicial = document.querySelector('input#ivi')
             var aporte = document.querySelector('input#iaporte')
-            var juros = document.querySelector('input#itaxa')
-            var prazo = document.querySelector('input#iprazo')
-            var calcular = document.querySelector('button#icalcular')
-
+            var taxa = document.querySelector('input#itaxa')
+            var prazo = document.querySelector('input#iprazo')  
             /* RESPOSTAS */
-            var investido = document.querySelector('div#investido') 
-            var jurosgan = document.querySelector('div#juros')
-            var final = document.querySelector('div#final')
-
+            var vinvest = document.querySelector('p#ivinvest')
+            var jurosgan = document.querySelector('p#ijg')
+            var vfinal = document.querySelector('p#ivfinal')
             /* Convertendo para número */
-            var inicialv = Number(inicial.value)
+            var inicialv = Number(vinicial.value)
             var aporten = Number(aporte.value)
-            var jurosn = Number(aporte.value)
+            var taxan = Number(taxa.value)
             var prazon = Number(prazo.value)
-            var calcularn = Number(calcular.value)
+            /* OPERAÇÕES */
+            var resultvinvest = inicialv + (aporten*prazon)
 
-            var resultado = inicialv*(1+jurosn)**prazon+aporten*[((1+prazon)**prazon-1)/jurosn]
+            var resultado = inicialv * (1 + (taxan/100)) ** prazon + aporten * [((1 + prazon) ** prazon - 1) / (taxan/100)]
 
-            final.innerHTML = `R$${resultado}`
+            vinvest.innerHTML = `R$${resultvinvest}`
+            vfinal.innerHTML = `R$${resultado}`
         }
 
-        
 
-        
-        
+
+
+
     </script>
 </body>
+
 </html>

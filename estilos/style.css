@@ -4,11 +4,11 @@
 /* SIDEBAR PARA PC */
 
 nav{
+    
     background-color: #232323;
     width: 240px;
     height: 100vh;
     padding: 0 15px;
-    position: sticky; /* Ainda não sei se está funcionando */
 
     display: flex;
     flex-flow: column nowrap;
