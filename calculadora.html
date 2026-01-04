@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaizen</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Importação estável via jsDelivr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css">
+
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/calculadora.css">
+    <link rel="stylesheet" href="estilos/mobile.css">
 </head>
 <body>
     <main>
@@ -14,45 +17,46 @@
             <a href="#"><img src="imagens/logo.png" alt="Logo marca Kaizen" ></a>
             <ul>
                 <a href="teste.html">
-                    <li><span class="material-icons-outlined">
-                        home
-                        </span>Início</li>
+                    <li><span class=
+                        "fi fi-rr-house-chimney"
+                        ></span>Início</li>     
                 </a>
                 <a href="teste.html">
-                    <li><span class="material-icons-outlined">
-                        trending_up
-                        </span>Fluxo de Caixa</li>
+                    <li><span class="fi fi-rs-arrow-trend-up"></span>Fluxo de Caixa</li>
                 </a>
                 <a href="teste.html">
-                    <li><span class="material-icons-outlined">
-                        donut_small
-                        </span>Gráficos</li>
+                    <li><span
+                        class=
+                        "fi fi-rs-chart-pie-alt"
+                        ></span>Gráficos</li>
                 </a>
                 <a href="teste.html">
-                    <li><span class="material-icons-outlined">
-                        savings
+                    <li><span class=
+                        "fi fi-rs-pig">
                         </span>Investimentos</li>
                 </a>
                 <a href="teste.html">
-                    <li><span class="material-icons-outlined">
-                        calculate
+                    <li><span class=
+                        "fi fi-rr-calculator"
+                        >
                         </span>Calculadora</li>
                 </a>
                 <a href="teste.html">
-                    <li><span class="material-icons-outlined">
-                        groups
-                        </span>Gestão de equipe</li>
+                    <li><span
+                        class=
+                        "fi fi-rs-users-alt"
+                        ></span>Gestão de equipe</li>
                 </a>
             </ul>
             <ul>
                 <a href="teste.html">
-                    <li><span class="material-icons-outlined">
-                        settings
-                        </span>Configurações</li>
+                    <li><span class="fi fi-rr-settings"></span>Configurações</li>
                 </a>
                 <a href="teste.html">
-                    <li><span class="material-icons-outlined">
-                        logout
+                    <li><span class=
+                        "fi fi-rs-exit"
+                        >
+
                     </span>Sair</li>
                 </a>
             </ul>
@@ -87,7 +91,8 @@
                         <button id="icalcular">Calcular</button>
                     </form>
                 </div>
-                <div>
+
+                <div id="resultados">
                     <h2>Resultados da Simulação</h2>
                     <div id="investido">
                         <p>Valor Investido</p>
@@ -110,20 +115,22 @@
 
             <div>
                 <h2>Dicas de Investimentos</h2>
-                <div class="dica">
-                    <p>Icone</p>
-                    <p>Comece Cedo</p>
-                    <p>O tempo é seu maior aliado. Quanto antes você começar a investir, mais os juros compostos trabalharão ao seu favor.</p>
-                </div>
-                <div class="dica">
-                    <p>Icone</p>
-                    <p>Seja Consistente</p>
-                    <p>Aportes regulares, mesmo que pequenos, podem gerar grandes resultados ao longo do tempo.</p>
-                </div>
-                <div class="dica">
-                    <p>Icone</p>
-                    <p>Defina Metas</p>
-                    <p>Ter objetivos claros ajuda a manter o foco e a disciplina necessária para investir regularmente.</p>
+                <div id="dicas">
+                    <div class="dica">
+                        <p><span class="fi fi-rs-arrow-trend-up" id="seta"></span></p>
+                        <p>Comece Cedo</p>
+                        <p>O tempo é seu maior aliado. Quanto antes você começar a investir, mais os juros compostos trabalharão ao seu favor.</p>
+                    </div>
+                    <div class="dica">
+                        <p><span class="fi fi-br-calendar" id="calendario"></span></p>
+                        <p>Seja Consistente</p>
+                        <p>Aportes regulares, mesmo que pequenos, podem gerar grandes resultados ao longo do tempo.</p>
+                    </div>
+                    <div class="dica">
+                        <p><span class="fi fi-rr-bullseye" id="alvo"></span></p>
+                        <p>Defina Metas</p>
+                        <p>Ter objetivos claros ajuda a manter o foco e a disciplina necessária para investir regularmente.</p>
+                    </div>
                 </div>
             </div>
         </section>

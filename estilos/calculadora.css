@@ -8,7 +8,7 @@
 body{
     margin: 0;
     height: 100vh;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
 }
 
 main{
@@ -42,7 +42,7 @@ div{
     border-radius: 12px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.250);
 
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 /* CONTEINER DE CABEÇALHO */
@@ -73,11 +73,13 @@ section>#filtro>p{
 }
 
 /* CONTAINER DE PARÂMETRO */
+#simulacao{
+    flex-basis: 420px;
+}
 
 div#simulacao>form{
     display: flex;
     flex-flow: column nowrap;
-
 }
 
 h2{
@@ -113,18 +115,76 @@ button{
 }
 
 /* RESULTADOS */
+#resultados{
+    flex-basis: 420px;
+}
+
 #investido{
     background-image: linear-gradient(to right, #902eca 10%, #6E17A6 100%);
+    padding: 16px 20px;
 }
 #juros{
     background-image: linear-gradient(to right, #22C55E, #158a40);
+    padding: 16px 20px;
 }
 #final{
     background-image: linear-gradient(to right, #3367D1, #2412AB);
+    padding: 16px 20px;
 }
 
 .real{
     font-size: 1.5em;
     font-weight: bolder;
     margin-top: 8px;
+}
+
+/* DICAS */
+ #dicas{
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    background-color: inherit;
+    box-shadow: none;
+} 
+
+.dica{
+    background-color: inherit;
+    box-shadow: none;
+    text-align: center;
+    
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    flex-basis: 240px;
+
+}
+.dica>p{
+    margin: 10px 0;
+}
+
+#seta, #calendario, #alvo{
+    font-size: 2.5em;
+    border-radius: 50%;
+}
+
+#seta{
+    background-color: #DCFCE7;
+    color: #16A34A;
+   
+}
+
+#calendario{
+    background-color: #E5DAF0;
+    color: #902eca;
+    
+}
+
+#alvo{
+    background-color: #DBEAFE;
+    color: #2412AB;
+    
 }
