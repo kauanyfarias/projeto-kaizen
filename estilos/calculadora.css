@@ -14,19 +14,17 @@ body{
 main{
     /* Direcionando o MAIN para ficar ao lado do sidebar */
     display: flex;
-    flex-flow: row nowrap;
-}
+    flex-flow: column wrap;
+    gap: 40px;
 
-section{
+    margin-left: 270px;
     background-color: #1E1E1E;
     color: #F1F1F1;
     padding: 36px;
-    flex: auto;
 }
 
 /* HEADER */
 h1{
-    margin: 0;
     font-weight: 600;
 }
 
@@ -41,6 +39,7 @@ h1{
 article#conteiner{
     display: flex;
     flex-flow: row wrap;
+    gap: 20px;/* Dá a distância */
     justify-content: space-between;
 }
 
@@ -50,7 +49,8 @@ article#conteiner{
     padding: 32px;
     border-radius: 12px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.250);
-    margin: 20px 0;
+
+    flex: 1 1 200px;
 }
 
 /* CONTAINER DE SIMULAÇÃO */
@@ -93,9 +93,6 @@ button{
 }
 
 /* RESULTADOS */
- #resultados{
-    margin-right: 0;
-} 
 
 #investido, #juros, #final{
     padding: 16px 20px;
@@ -133,9 +130,6 @@ aside{
     display: flex;
     justify-content: space-evenly;
     flex-flow: row wrap;
-
-    background-color: inherit;
-    padding: 0;
 } 
 
 .dica{

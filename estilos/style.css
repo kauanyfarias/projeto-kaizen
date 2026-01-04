@@ -4,7 +4,7 @@
 /* SIDEBAR PARA PC */
 
 nav{
-    
+    position: fixed;
     background-color: #232323;
     width: 240px;
     height: 100vh;
